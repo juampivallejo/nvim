@@ -80,7 +80,6 @@ return {
         "shfmt",
         "flake8",
         "pyright",
-        "black",
       },
     },
   },
