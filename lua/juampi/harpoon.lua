@@ -32,7 +32,7 @@ end, { desc = "Harpoon Menu" })
 --  toggle_telescope(harpoon:list())
 -- end, { desc = "Open harpoon window" })
 
-vim.keymap.set("n", "<a-m>", function()
+vim.keymap.set("n", "<a-a>", function()
   harpoon:list():append()
 end, { desc = "Harpoon Add File" })
 
