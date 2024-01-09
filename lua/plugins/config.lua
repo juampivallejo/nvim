@@ -5,6 +5,14 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  -- Configure LazyVim to load catppuccin
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "tokyonight",
+    },
+  },
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
@@ -130,5 +138,20 @@ return {
         end, { "i", "s" }),
       })
     end,
+  },
+  -- From LazyVIM docs:
+  {
+    "echasnovski/mini.surround",
+    opts = {
+      mappings = {
+        add = "gza", -- Add surrounding in Normal and Visual modes
+        delete = "gzd", -- Delete surrounding
+        find = "gzf", -- Find surrounding (to the right)
+        find_left = "gzF", -- Find surrounding (to the left)
+        highlight = "gzh", -- Highlight surrounding
+        replace = "gzr", -- Replace surrounding
+        update_n_lines = "gzn", -- Update `n_lines`
+      },
+    },
   },
 }

@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank +" })
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank +" })
 vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank EOL +" })
 
--- Naviate quick list
+-- Naviate quickfix list
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
