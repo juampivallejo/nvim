@@ -25,21 +25,18 @@ return {
     },
   },
 
-  -- add pyright to lspconfig
+  -- add jedi to lspconfig
   {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
       ---@type lspconfig.options
       servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
+        -- jedi will be automatically installed with mason and loaded with lspconfig
+        jedi_language_server = {},
       },
     },
   },
-
-  { import = "lazyvim.plugins.extras.lang.python" },
-
   -- add more treesitter parsers
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
@@ -79,11 +76,10 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
-        "pyright",
+        "jedi-language-server",
       },
     },
   },
-
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
