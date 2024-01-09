@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   desc = "Isort-format Python files after saving",
   callback = function()
     local fileName = vim.api.nvim_buf_get_name(0)
-    vim.cmd(":!isort " .. fileName)
+    vim.cmd(":silent !isort " .. fileName)
   end,
   group = autocmd_group,
 })
