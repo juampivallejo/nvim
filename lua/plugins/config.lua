@@ -44,15 +44,15 @@ return {
     },
   },
 
-  -- add jedi to lspconfig
+  -- add python LSP to lspconfig
   {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
       ---@type lspconfig.options
+      ---@diagnostic disable-next-line: missing-fields
       servers = {
-        -- jedi will be automatically installed with mason and loaded with lspconfig
-        jedi_language_server = {},
+        "python-lsp-server",
       },
     },
   },
@@ -85,6 +85,7 @@ return {
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
+  { import = "lazyvim.plugins.extras.util.project" },
 
   -- add any tools you want to have installed below
   {
@@ -95,7 +96,8 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
-        "jedi-language-server",
+        "python-lsp-server",
+        "ruff-lsp",
       },
     },
   },
