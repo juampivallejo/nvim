@@ -52,7 +52,7 @@ return {
       ---@type lspconfig.options
       ---@diagnostic disable-next-line: missing-fields
       servers = {
-        "python-lsp-server",
+        "pyright",
       },
     },
   },
@@ -96,7 +96,7 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
-        "python-lsp-server",
+        "pyright",
         "ruff-lsp",
       },
     },
