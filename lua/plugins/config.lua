@@ -13,6 +13,17 @@ return {
       colorscheme = "tokyonight",
     },
   },
+  -- Make transparent
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
