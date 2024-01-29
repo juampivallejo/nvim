@@ -95,7 +95,6 @@ return {
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
-  { import = "lazyvim.plugins.extras.util.project" },
 
   -- add any tools you want to have installed below
   {
@@ -161,20 +160,5 @@ return {
         end, { "i", "s" }),
       })
     end,
-  },
-  -- From LazyVIM docs:
-  {
-    "echasnovski/mini.surround",
-    opts = {
-      mappings = {
-        add = "gza", -- Add surrounding in Normal and Visual modes
-        delete = "gzd", -- Delete surrounding
-        find = "gzf", -- Find surrounding (to the right)
-        find_left = "gzF", -- Find surrounding (to the left)
-        highlight = "gzh", -- Highlight surrounding
-        replace = "gzr", -- Replace surrounding
-        update_n_lines = "gzn", -- Update `n_lines`
-      },
-    },
   },
 }
