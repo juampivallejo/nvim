@@ -1,5 +1,6 @@
 require("juampi.remap")
 require("juampi.harpoon")
+require("juampi.rest")
 require("juampi.set")
 
 vim.api.nvim_create_autocmd("VimEnter", {

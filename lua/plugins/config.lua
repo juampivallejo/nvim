@@ -50,6 +50,8 @@ return {
       ---@diagnostic disable-next-line: missing-fields
       servers = {
         "pyright",
+        "typos_lsp",
+        "ruff_lsp",
       },
     },
   },
@@ -64,6 +66,7 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "bash",
         "html",
+        "http",
         "javascript",
         "json",
         "lua",

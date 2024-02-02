@@ -22,5 +22,12 @@ return {
       end,
       desc = "Telescope quickfix",
     },
+    {
+      "<leader>xs",
+      function()
+        require("telescope.builtin").spell_suggest({})
+      end,
+      desc = "Spell Suggestions",
+    },
   },
 }
