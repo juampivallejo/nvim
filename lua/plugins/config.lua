@@ -15,23 +15,19 @@ return {
       },
     },
   },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   -- Configure LazyVim to load catppuccin
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin",
     },
   },
   -- Make transparent
   {
-    "folke/tokyonight.nvim",
+    "catppuccin",
     opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+      transparent_background = true,
+      flavour = "mocha",
     },
   },
   -- add symbols-outline
