@@ -47,6 +47,7 @@ return {
       servers = {
         "pyright",
         "ruff_lsp",
+        "gopls",
       },
     },
   },
@@ -68,6 +69,7 @@ return {
         "markdown",
         "markdown_inline",
         "python",
+        "go",
         "query",
         "regex",
         "tsx",
