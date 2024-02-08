@@ -1,7 +1,7 @@
 local builtin = require("telescope.builtin")
+
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-vim.keymap.set("n", "<leader>pf", builtin.git_files, { desc = "Find Git Files" })
-vim.keymap.set("n", "<leader>ps", function()
+vim.keymap.set("n", "<leader>p", function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end, { desc = "Project Search Word" })
 
@@ -10,8 +10,8 @@ vim.keymap.set("n", "<leader>p", '"_dP', { desc = "Paste special" })
 vim.keymap.set("n", "<leader>P", '"_dP', { desc = "Paste special" })
 
 -- Yank to clipboard
-vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank +" })
-vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank +" })
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank +" }) -- Normal Mode
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank +" }) -- Visual Mode
 vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank EOL +" })
 
 -- Keep cursor on middle of screen when scrolling
