@@ -4,16 +4,6 @@
 --
 local autocmd_group = vim.api.nvim_create_augroup("Custom auto-commands", { clear = true })
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-  pattern = { "*.py" },
-  desc = "Isort-format Python files after saving",
-  callback = function()
-    local fileName = vim.api.nvim_buf_get_name(0)
-    vim.cmd(":silent !isort " .. fileName)
-  end,
-  group = autocmd_group,
-})
-
 -- Make NeoTree Transparent (Required for Catppuccin)
 vim.api.nvim_create_augroup("nobg", { clear = true })
 vim.api.nvim_create_autocmd({ "ColorScheme" }, {
