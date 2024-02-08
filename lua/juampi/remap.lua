@@ -7,7 +7,7 @@ end, { desc = "Project Search Word" })
 
 -- Keep buffer after pasting and replacing something
 vim.keymap.set("n", "<leader>p", '"_dP', { desc = "Paste special" })
-vim.keymap.set("n", "<leader>P", '"_dP', { desc = "Paste special" })
+vim.keymap.set("v", "<leader>p", '"_dP', { desc = "Paste special" })
 
 -- Yank to clipboard
 vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank +" }) -- Normal Mode
