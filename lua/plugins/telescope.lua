@@ -9,6 +9,13 @@ return {
   },
   keys = {
     {
+      "<leader>fF",
+      function()
+        require("telescope.builtin").find_files({ no_ignore = true })
+      end,
+      desc = "Find files (ignored)",
+    },
+    {
       "<leader>r",
       function()
         require("telescope.builtin").resume({})
