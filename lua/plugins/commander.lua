@@ -4,7 +4,6 @@ return {
     "nvim-telescope/telescope.nvim",
   },
   keys = {
-    { "<C-P>", "<CMD>Telescope commander<CR>", mode = "n", desc = "Commander" },
     { "<leader>fg", "<CMD>Telescope commander<CR>", mode = "n", desc = "Commander" },
   },
   config = function()
