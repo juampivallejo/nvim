@@ -45,8 +45,8 @@ return {
       ---@type lspconfig.options
       ---@diagnostic disable-next-line: missing-fields
       servers = {
-        "pyright",
-        "gopls",
+        pyright = {},
+        gopls = {},
       },
     },
   },
