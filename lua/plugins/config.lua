@@ -47,6 +47,8 @@ return {
       servers = {
         pyright = {},
         gopls = {},
+        lua_language_server = {},
+        nil_ls = {},
       },
     },
   },
