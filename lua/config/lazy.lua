@@ -16,9 +16,13 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 
     -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
-    { import = "lazyvim.plugins.extras.lang.json" },
+    -- TODO: Fix missing json lsp package on nixos
+    -- It is imported with as vscode-json-languageserver instead of vscode-json-language-server
+    -- { import = "lazyvim.plugins.extras.lang.json" },
+
     -- add none-ls extra for Cspell
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
+
     -- add any tools you want to have installed below
     -- import/override with your plugins
     { import = "plugins" },

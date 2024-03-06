@@ -37,21 +37,7 @@ return {
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
     config = true,
   },
-  -- add python LSP to lspconfig
-  {
-    "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      ---@type lspconfig.options
-      ---@diagnostic disable-next-line: missing-fields
-      servers = {
-        pyright = {},
-        gopls = {},
-        lua_language_server = {},
-        nil_ls = {},
-      },
-    },
-  },
+
   -- add more treesitter parsers
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
@@ -81,17 +67,22 @@ return {
     end,
   },
 
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "shfmt",
-        "flake8",
-        "pyright",
-      },
-    },
-  },
+  -- disable mason
+  { "williamboman/mason.nvim", enabled = false },
+  -- Replace to enable
+  -- {
+  --   "williamboman/mason.nvim",
+  --   opts = {
+  --     ensure_installed = {
+  --       -- "stylua",
+  --       -- "shfmt",
+  --       -- "flake8",
+  --       -- "pyright",
+  --       -- "lua-language-server",
+  --     },
+  --   },
+  -- },
+
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
