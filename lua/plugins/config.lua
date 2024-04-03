@@ -37,7 +37,6 @@ return {
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
     config = true,
   },
-
   -- add more treesitter parsers
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
@@ -68,20 +67,20 @@ return {
   },
 
   -- disable mason
-  { "williamboman/mason.nvim", enabled = false },
+  -- { "williamboman/mason.nvim", enabled = false },
   -- Replace to enable
-  -- {
-  --   "williamboman/mason.nvim",
-  --   opts = {
-  --     ensure_installed = {
-  --       -- "stylua",
-  --       -- "shfmt",
-  --       -- "flake8",
-  --       -- "pyright",
-  --       -- "lua-language-server",
-  --     },
-  --   },
-  -- },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "stylua",
+        "shfmt",
+        "flake8",
+        "pyright",
+        "lua-language-server",
+      },
+    },
+  },
 
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
