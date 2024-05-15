@@ -10,7 +10,6 @@ return {
       pyright = {},
       gopls = {},
       lua_ls = {},
-      nil_ls = {},
     },
   },
 }
